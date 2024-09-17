@@ -6,7 +6,7 @@ Mongoid.load!(File.join(File.dirname(__FILE__), 'config', 'mongoid.yml'))
 
 get '/samples' do
 
-    { "answer" => "Hi!"}.to_json
+    Sample.all.to_json
 
 end
 
@@ -30,5 +30,6 @@ class Sample
 
     field :id, type: String
     field :taxon, type: String
+    field :alleles, type: String
 
 end

@@ -1,6 +1,10 @@
 development:
   clients:
     default:
-      uri: mongodb://marc:test@localhost:8088/bead_development?retryWrites=true&w=majority
+      database: admin
+      hosts:
+        - localhost:27017
       options:
+        user: 'marc'
+        password: 'test'
         server_selection_timeout: 1
